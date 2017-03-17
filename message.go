@@ -114,7 +114,7 @@ func NewAndroidMessage(title, description string) *Message {
 		NotifyType:  -1, // default notify type
 		TimeToLive:  0,
 		TimeToSend:  0,
-		NotifyID:    0,
+		NotifyID:    time.Now().Unix(),//为了防止翻盖随机的数据
 		Extra:       make(map[string]string),
 	}
 }
